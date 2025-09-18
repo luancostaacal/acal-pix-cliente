@@ -29,10 +29,16 @@ body {
   .container {
     padding: 1rem;
   }
+  .trae-badge--bottom-right {
+display: none !important;
+}
 }
 
 @media (max-width: 480px) {
   .container {
     padding: 0.5rem;
   }
+.trae-badge--bottom-right {
+display: none !important;
+}
 }

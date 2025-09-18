@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste da Aplicação PixCliente</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .test-link {
+            display: inline-block;
+            background: #007bff;
+            color: white;
+            padding: 15px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        .test-link:hover {
+            background: #0056b3;
+        }
+        .code {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            word-break: break-all;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 Teste da Aplicação PixCliente</h1>
+        
+        <h2>URLs de Teste:</h2>
+        
+        <h3>1. Teste Completo (todos os parâmetros):</h3>
+        <div class="code">
+            http://localhost:5173/?codigo=00020126580014BR.GOV.BCB.PIX013636c4b8c4-4c4c-4c4c-4c4c-4c4c4c4c4c4c5204000053039865802BR5925ACME LTDA6009SAO PAULO62070503***6304ABCD&cliente=João%20Silva&valor=R$%20150,00&pedido=12345
+        </div>
+        <a href="http://localhost:5173/?codigo=00020126580014BR.GOV.BCB.PIX013636c4b8c4-4c4c-4c4c-4c4c-4c4c4c4c4c4c5204000053039865802BR5925ACME LTDA6009SAO PAULO62070503***6304ABCD&cliente=João%20Silva&valor=R$%20150,00&pedido=12345" class="test-link" target="_blank">
+            🔗 Testar URL Completa
+        </a>
+        
+        <h3>2. Teste Mínimo (apenas código PIX):</h3>
+        <div class="code">
+            http://localhost:5173/?codigo=00020126580014BR.GOV.BCB.PIX013636c4b8c4-4c4c-4c4c-4c4c-4c4c4c4c4c4c5204000053039865802BR5925ACME LTDA6009SAO PAULO62070503***6304ABCD
+        </div>
+        <a href="http://localhost:5173/?codigo=00020126580014BR.GOV.BCB.PIX013636c4b8c4-4c4c-4c4c-4c4c-4c4c4c4c4c4c5204000053039865802BR5925ACME LTDA6009SAO PAULO62070503***6304ABCD" class="test-link" target="_blank">
+            🔗 Testar URL Mínima
+        </a>
+        
+        <h3>3. Teste com Alguns Parâmetros:</h3>
+        <div class="code">
+            http://localhost:5173/?codigo=00020126580014BR.GOV.BCB.PIX013636c4b8c4-4c4c-4c4c-4c4c-4c4c4c4c4c4c5204000053039865802BR5925ACME LTDA6009SAO PAULO62070503***6304ABCD&cliente=Maria%20Santos&valor=R$%2075,50
+        </div>
+        <a href="http://localhost:5173/?codigo=00020126580014BR.GOV.BCB.PIX013636c4b8c4-4c4c-4c4c-4c4c-4c4c4c4c4c4c5204000053039865802BR5925ACME LTDA6009SAO PAULO62070503***6304ABCD&cliente=Maria%20Santos&valor=R$%2075,50" class="test-link" target="_blank">
+            🔗 Testar URL Parcial
+        </a>
+        
+        <h2>📋 Instruções:</h2>
+        <ol>
+            <li>Certifique-se de que o servidor de desenvolvimento está rodando em <code>http://localhost:5173</code></li>
+            <li>Clique em qualquer um dos links de teste acima</li>
+            <li>Verifique se a aplicação carrega corretamente</li>
+            <li>Abra o console do navegador (F12) para ver os logs de debug</li>
+            <li>Verifique se os dados são exibidos corretamente na interface</li>
+        </ol>
+        
+        <h2>🔍 O que verificar:</h2>
+        <ul>
+            <li>✅ A aplicação não deve mais mostrar erro de "dados incompletos"</li>
+            <li>✅ O QR Code deve ser gerado corretamente</li>
+            <li>✅ O código PIX deve ser exibido e copiável</li>
+            <li>✅ Dados ausentes devem mostrar "não informado"</li>
+            <li>✅ Logs de debug devem aparecer no console</li>
+        </ul>
+        
+        <h2>🚨 Teste de Erro:</h2>
+        <p>Para testar o tratamento de erro, acesse uma URL sem o parâmetro código:</p>
+        <div class="code">
+            http://localhost:5173/?cliente=Teste&valor=100
+        </div>
+        <a href="http://localhost:5173/?cliente=Teste&valor=100" class="test-link" target="_blank">
+            🔗 Testar Erro (sem código PIX)
+        </a>
+    </div>
+</body>
+</html>

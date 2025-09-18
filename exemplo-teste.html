@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste PixCliente</title>
+</head>
+<body>
+    <h1>Teste da Aplicação PixCliente</h1>
+    
+    <h2>Links de Teste:</h2>
+    
+    <p><strong>Exemplo 1 - Dados Completos:</strong></p>
+    <a href="http://localhost:5173/?codigo=00020126580014BR.GOV.BCB.PIX013636c4c14e-4b1a-4b2a-8b3a-1234567890ab5204000053039865802BR5925EMPRESA%20EXEMPLO%20LTDA6009SAO%20PAULO62070503***6304ABCD&cliente=João%20Silva&valor=150.50&pedido=12345" target="_blank">
+        Teste com João Silva - R$ 150,50 - Pedido #12345
+    </a>
+    
+    <p><strong>Exemplo 2 - Valor Alto:</strong></p>
+    <a href="http://localhost:5173/?codigo=00020126580014BR.GOV.BCB.PIX013636c4c14e-4b1a-4b2a-8b3a-1234567890ab5204000053039865802BR5925EMPRESA%20EXEMPLO%20LTDA6009SAO%20PAULO62070503***6304ABCD&cliente=Maria%20Santos&valor=2500.00&pedido=67890" target="_blank">
+        Teste com Maria Santos - R$ 2.500,00 - Pedido #67890
+    </a>
+    
+    <p><strong>Exemplo 3 - Dados Incompletos (para testar erro):</strong></p>
+    <a href="http://localhost:5173/?codigo=00020126580014BR.GOV.BCB.PIX013636c4c14e-4b1a-4b2a-8b3a-1234567890ab5204000053039865802BR5925EMPRESA%20EXEMPLO%20LTDA6009SAO%20PAULO62070503***6304ABCD&cliente=Pedro%20Costa" target="_blank">
+        Teste com dados incompletos (deve mostrar erro)
+    </a>
+    
+    <hr>
+    
+    <h2>Como usar:</h2>
+    <ol>
+        <li>Certifique-se de que o servidor está rodando em <code>http://localhost:5173/</code></li>
+        <li>Clique em um dos links de teste acima</li>
+        <li>A aplicação deve exibir:
+            <ul>
+                <li>QR Code do PIX</li>
+                <li>Código copia e cola com botão para copiar</li>
+                <li>Informações do cliente, valor e pedido</li>
+                <li>Design responsivo e moderno</li>
+            </ul>
+        </li>
+    </ol>
+    
+    <h2>Formato da URL:</h2>
+    <code>
+        http://localhost:5173/?codigo=[CODIGO_PIX]&cliente=[NOME_CLIENTE]&valor=[VALOR]&pedido=[NUMERO_PEDIDO]
+    </code>
+    
+    <p><em>Todos os parâmetros devem estar presentes para o funcionamento correto.</em></p>
+</body>
+</html>

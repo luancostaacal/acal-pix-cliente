@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import QRCodeDisplay from './QRCodeDisplay';
 import PixCodeDisplay from './PixCodeDisplay';
 import ClientInfo from './ClientInfo';
+import logo from '../assets/acal-logo.png'
 
 interface PixData {
   codigo: string;
@@ -76,6 +77,7 @@ const PixViewer: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <div className="container mx-auto px-4 py-8">
         <header className="text-center mb-8">
+          <img src={logo} width={140} alt="Logo" className="mx-auto mb-4" />
           <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
             Pagamento PIX
           </h1>
@@ -109,7 +111,7 @@ const PixViewer: React.FC = () => {
         </div>
 
         <footer className="text-center mt-12 text-gray-500 text-sm">
-          <p>© 2024 - Sistema de Pagamento PIX</p>
+          <p>© 2025 - Sistema de Pagamento PIX</p>
         </footer>
       </div>
     </div>

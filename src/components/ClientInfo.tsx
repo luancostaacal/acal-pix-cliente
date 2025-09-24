@@ -43,7 +43,7 @@ const ClientInfo: React.FC<ClientInfoProps> = ({ cliente, valor, pedido }) => {
         </div>
 
         {/* Valor */}
-        {/* <div className="flex items-start space-x-3">
+        /* <div className="flex items-start space-x-3">
           <div className="flex-shrink-0">
             <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
               <DollarSign size={16} className="text-green-600" />
@@ -53,7 +53,7 @@ const ClientInfo: React.FC<ClientInfoProps> = ({ cliente, valor, pedido }) => {
             <p className="text-sm font-medium text-gray-600">Valor</p>
             <p className="text-2xl text-green-600 font-bold">{formatCurrency(valor)}</p>
           </div>
-        </div> */}
+        </div> */
 
         {/* Pedido */}
         <div className="flex items-start space-x-3">
